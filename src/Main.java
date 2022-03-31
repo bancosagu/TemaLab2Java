@@ -43,7 +43,7 @@ public class Main {
 
         //7
         System.out.println("Exercitiul 7: \n");
-        int celsius = temperatura (300);
+        double celsius = temperatura (300);
 
         System.out.println("Temperatura in Celsius este: " + celsius + "\n");
 
@@ -52,14 +52,12 @@ public class Main {
         float metri = distanta(80);
         System.out.println("Distanta in metri este de: " + metri +"\n");
 
-//        //9    Acest exercitiu este comentat deoarece nu am reusit inca sa gasesc
-//        o metoda de a returna "multiple return statements" care sa functioneze.
-//        Cea mai plauzibila metoda mi se pare cea de a returna "array" dar nu am avut
-//        timp sa o studiez destul.
+        //9
+        System.out.println("Exercitiul 9: \n");
+        float [] viteza;
+        viteza = viteza ();
+        System.out.println(viteza[0]);
 
-
-//        System.out.println("Exercitiul 9: \n");
-//        float [] viteza = float viteza( );
 
 
 
@@ -140,9 +138,9 @@ public class Main {
     }
 
     //7
-    public static int temperatura (int fahrenheit){
+    public static double temperatura (double fahrenheit){
 
-        int celsius = ((fahrenheit-32)*5/9);
+        double celsius = ((fahrenheit-32)*5d/9);
         return celsius;
 
     }
@@ -157,38 +155,38 @@ public class Main {
     }
 
     //9
-//    public static float [] viteza (float mps, float kmph, float mph){
-//        Scanner scanner = new Scanner(System.in);
-//
-//        float timpSecunde;
-//
-//        System.out.println("Introdu distanta in metri: ");
-//        float distanta = scanner.nextFloat();
-//
-//        System.out.println("Introdu numarul de ore: ");
-//        float hr = scanner.nextFloat();
-//
-//        System.out.println("Introdu numarul de minute: ");
-//        float min = scanner.nextFloat();
-//
-//        System.out.println("Introdu numarul de secunde: ");
-//        float sec = scanner.nextFloat();
-//
-//        scanner.close();
-//
-//
-//        timpSecunde = (hr * 3600) + (min * 60) + sec;
-//
-//        float mps = distanta / timpSecunde;
-//        float kmph = ((distanta / 1000f) / (timpSecunde / 3600f));
-//        float mph = ((distanta / 1000f) / (timpSecunde / 3600f)) / 1.609F;
-//
-//
-//        float [] array = new float [3];
-//        array[0] = mps;
-//        array[1] = kmph;
-//        array[2] = mph;
-//        return array;
-//
-//    }
+    public static float [] viteza (){
+        Scanner scanner = new Scanner(System.in);
+
+        float timpSecunde;
+
+        System.out.println("Introdu distanta in metri: ");
+        float distanta = scanner.nextFloat();
+
+        System.out.println("Introdu numarul de ore: ");
+        float hr = scanner.nextFloat();
+
+        System.out.println("Introdu numarul de minute: ");
+        float min = scanner.nextFloat();
+
+        System.out.println("Introdu numarul de secunde: ");
+        float sec = scanner.nextFloat();
+
+        scanner.close();
+
+
+        timpSecunde = (hr * 3600) + (min * 60) + sec;
+
+        float mps = distanta / timpSecunde;
+        float kmph = ((distanta / 1000f) / (timpSecunde / 3600f));
+        float mph = ((distanta / 1000f) / (timpSecunde / 3600f)) / 1.609F;
+
+
+        float [] array = new float [3];
+        array[0] = mps;
+        array[1] = kmph;
+        array[2] = mph;
+        return array;
+
+    }
 }
